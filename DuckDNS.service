@@ -1,0 +1,10 @@
+[Unit]
+Description=DuckDNS update job
+After=network.target network-online.target systemd-networkd.service NetworkManager.service connman.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /root/DuckDNS.sh
+
+[Install]
+WantedBy=multi-user.target

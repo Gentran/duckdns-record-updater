@@ -1,0 +1,9 @@
+[Unit]
+Description=Timing DuckDNS update
+
+[Timer]
+OnCalendar=*-*-* *:5:00
+OnStartupSec=2m
+
+[Install]
+WantedBy=timers.target
